@@ -1,10 +1,11 @@
 package mk.finki.ukim.wp.organizeme.persistence;
 
 import mk.finki.ukim.wp.organizeme.model.StudyProgram;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface StudyProgramRepository {
+public interface StudyProgramRepository  extends JpaRepository<StudyProgram, Long> {
     List<StudyProgram> listAllStudyPrograms();
 
     StudyProgram getStudyProgramByIndex(long index) throws Exception;
